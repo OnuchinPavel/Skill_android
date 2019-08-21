@@ -1,0 +1,13 @@
+keytool -exportcert -alias yandiki -keystore ./store.jks | openssl sha1 -binary | openssl base64
+cSqgNimIMNm5N8UDZK+yVTUfSps=
+
+
+keytool -exportcert -list -v -alias android -keystore ./store.jks
+
+
+
+	 MD5:  0A:B7:0F:A9:1C:9A:43:86:2C:2A:25:12:05:33:97:A9
+	 SHA1: A6:1C:1A:E1:29:1D:C5:F7:FA:57:45:07:B3:2B:F7:38:C5:C7:BF:34
+	 SHA256: 3D:80:52:41:A6:A4:64:D6:1E:F0:32:68:80:48:96:AF:22:D1:9D:22:C0:21:83:4C:86:2E:A6:92:CF:3A:94:C5
+
+

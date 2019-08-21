@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main_navigation_graph"
+            app:startDestination="@id/navigation_splash">
+
+    <!--Help Center -->
+    <fragment android:id="@+id/navigation_help_center"
+              android:name="ru.prsolution.winstrike.presentation.login.help.HelpCenterFragment"
+              tools:layout="@layout/fmt_help_center"
+              android:label="Помощь при входе"
+    >
+        <!--Navigate to phone-->
+        <action android:id="@+id/action_to_help_phone"
+                app:destination="@id/help_phone" app:popUpTo="@+id/navigation_help_center" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!--Code Help -->
+    <fragment android:id="@+id/help_code"
+              android:name="ru.prsolution.winstrike.presentation.login.help.HelpCodeFragment"
+              tools:layout="@layout/fmt_help_code"
+              android:label="Введите код подтверждения">
+
+        <!--Navigate to Password-->
+        <action android:id="@+id/action_to_help_password"
+                app:destination="@id/help_password" app:popUpTo="@+id/help_code" app:popUpToInclusive="true"/>
+
+        <!--Navigate to Login-->
+        <action android:id="@+id/action_to_login"
+                app:destination="@id/navigation_login" app:popUpTo="@+id/help_code" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!--Phone - Help-->
+    <fragment android:id="@+id/help_phone"
+              android:name="ru.prsolution.winstrike.presentation.login.help.HelpPhoneFragment"
+              tools:layout="@layout/fmt_help_phone"
+              android:label="Введите номер телефона"
+    >
+        <!--Navigate to code-->
+        <action android:id="@+id/action_to_help_code"
+                app:destination="@id/help_code" app:popUpTo="@+id/help_phone" app:popUpToInclusive="true"/>
+
+        <!--Navigate to Login-->
+        <action android:id="@+id/action_to_login"
+                app:destination="@id/navigation_login" app:popUpToInclusive="true" app:popUpTo="@+id/help_phone"/>
+    </fragment>
+
+    <!--Password Help-->
+    <fragment android:id="@+id/help_password"
+              android:name="ru.prsolution.winstrike.presentation.login.help.HelpPasswordFragment"
+              tools:layout="@layout/fmt_change_passw"
+              android:label="Введите новый пароль">
+
+        <!--Code for password confirmation-->
+        <argument android:name="code"
+                  android:defaultValue=" "
+                  app:argType="string"/>
+
+        <!--Navigate to Login-->
+        <action android:id="@+id/action_to_navigation_login"
+                app:destination="@id/navigation_login" app:popUpToInclusive="true" app:popUpTo="@+id/help_password"/>
+    </fragment>
+
+    <!--Name - Help-->
+    <fragment android:id="@+id/help_name"
+              tools:layout="@layout/fmt_name"
+              android:name="ru.prsolution.winstrike.presentation.login.register.NameFragment"
+              android:label="Введите Ваше имя"
+    >
+        <!--Code-->
+        <argument android:name="code"
+                  android:defaultValue=" "
+                  app:argType="string"/>
+        <!--Phone-->
+        <argument android:name="phone"
+                  android:defaultValue=" "
+                  app:argType="string"/>
+
+        <!--Navigation to City List -->
+        <action android:id="@+id/action_to_city_list"
+                app:destination="@id/navigation_city_list" app:popUpTo="@+id/help_name"
+                app:popUpToInclusive="true"/>
+
+    </fragment>
+
+    <!--Register - Help-->
+    <fragment android:id="@+id/navigation_register"
+              tools:layout="@layout/fmt_register"
+              android:name="ru.prsolution.winstrike.presentation.login.register.RegisterFragment"
+              android:label="Регистрация пользователя">
+
+        <!--Navigation to Code-->
+        <action android:id="@+id/action_to_navigation_code"
+                app:destination="@id/navigation_code" app:popUpTo="@+id/navigation_register"
+                app:popUpToInclusive="true"/>
+
+        <!--Navigation to Login-->
+        <action android:id="@+id/action_to_navigation_login"
+                app:destination="@id/navigation_login"/>
+    </fragment>
+
+    <!--Code Help-->
+    <fragment android:id="@+id/navigation_code"
+              tools:layout="@layout/fmt_code"
+              android:name="ru.prsolution.winstrike.presentation.login.register.CodeFragment"
+              android:label="Введите код подтверждения">
+        <!--Navigate to Name-->
+        <action android:id="@+id/action_to_nameFragment"
+                app:destination="@id/help_name" app:popUpTo="@+id/navigation_code" app:popUpToInclusive="true"/>
+        <!--Phone-->
+        <argument android:name="phone"
+                  android:defaultValue=" "
+                  app:argType="string"/>
+    </fragment>
+
+    <!--Policy - Login-->
+    <fragment android:id="@+id/navigation_politika"
+              android:label="{title}"
+              tools:layout="@layout/fmt_web_view"
+              android:name="ru.prsolution.winstrike.presentation.login.PolitikaWebViewFragment"
+    >
+        <argument
+                android:defaultValue="Политика Winstrike"
+                android:name="title"
+                app:argType="string"/>
+        <argument android:name="url" app:argType="string"/>
+    </fragment>
+
+    <!--Login-->
+    <fragment android:id="@+id/navigation_login"
+              android:name="ru.prsolution.winstrike.presentation.login.LoginFragment"
+              tools:layout="@layout/fmt_login"
+              android:label="Авторизация пользователя"
+    >
+        <!--Navigate to Policy-->
+        <action android:id="@+id/next_action_politika"
+                app:destination="@id/navigation_politika"/>
+        <!--Navigate to Help Center -->
+        <action android:id="@+id/next_action_help"
+                app:destination="@id/navigation_help_center"
+                app:popUpTo="@+id/navigation_login" app:popUpToInclusive="false"/>
+        <!--Navigate to Register-->
+        <action android:id="@+id/action_to_navigation_register"
+                app:destination="@id/navigation_register" app:popUpTo="@+id/navigation_login"
+                app:popUpToInclusive="false"/>
+
+        <!--Navigate to Code-->
+        <action android:id="@+id/action_to_code"
+                app:destination="@id/navigation_code" app:popUpTo="@+id/navigation_login" app:popUpToInclusive="false"/>
+
+        <!-- Navigate to  City List -->
+        <action android:id="@+id/action_to_city_list"
+                app:destination="@id/navigation_city_list" app:popUpTo="@+id/navigation_login"
+                app:popUpToInclusive="true"/>
+        <argument android:name="clearStack" app:argType="boolean" android:defaultValue="false"/>
+
+    </fragment>
+
+
+    <!--Splash-->
+    <fragment android:id="@+id/navigation_splash"
+              tools:layout="@layout/fmt_splash"
+              android:name="ru.prsolution.winstrike.presentation.splash.SplashFragment"
+              android:label="Winstrike">
+
+
+        <!--Navigate to City List-->
+        <action android:id="@+id/action_to_city_list"
+                app:destination="@id/navigation_city_list" app:popUpTo="@+id/navigation_splash"
+                app:popUpToInclusive="true"/>
+
+        <!--Navigate to Login-->
+        <action android:id="@+id/action_to_login"
+                app:destination="@id/navigation_login"
+                app:popUpToInclusive="true"
+                app:popUpTo="@+id/navigation_splash"/>
+
+        <!--Navigate to Home-->
+        <action android:id="@+id/action_to_home"
+                app:destination="@id/navigation_home"
+                app:popUpTo="@+id/navigation_splash" app:popUpToInclusive="true"/>
+
+        <argument android:name="navigate_to_city"
+                  app:argType="boolean"
+                  android:defaultValue="false"/>
+
+    </fragment>
+
+    <!--City List-->
+    <fragment
+            android:id="@+id/navigation_city_list"
+            android:label="Выберите город"
+            android:name="ru.prsolution.winstrike.presentation.cities.CityListFragment"
+            tools:layout="@layout/fmt_city_list">
+
+        <!--Navigate to ArenaStorage Item-->
+        <action
+                android:id="@+id/action_to_arena"
+                app:destination="@id/navigation_arena"
+                app:popUpToInclusive="false"/>
+
+    </fragment>
+
+    <!--ArenaStorage List-->
+    <fragment
+            android:id="@+id/navigation_arena"
+            android:label="Выберите арену"
+            android:name="ru.prsolution.winstrike.presentation.cities.ArenaItemFragment"
+            tools:layout="@layout/fmt_arena">
+
+<!--        <argument-->
+<!--                android:name="cityPid"-->
+<!--                app:argType="string"-->
+<!--                android:defaultValue=" "-->
+<!--        />-->
+<!--        <argument-->
+<!--                android:name="cityName"-->
+<!--                app:argType="string"-->
+<!--                android:defaultValue=" "-->
+<!--        />-->
+
+        <!--Navigate to Home -->
+        <action android:id="@+id/action_to_home"
+                app:destination="@id/navigation_home" app:popUpTo="@+id/navigation_arena" app:popUpToInclusive="true"/>
+
+    </fragment>
+
+    <!--Home-->
+    <fragment
+            android:id="@+id/navigation_home"
+            android:label="{title}"
+            android:name="ru.prsolution.winstrike.presentation.main.HomeFragment"
+            tools:layout="@layout/fmt_home">
+        <action
+                android:id="@+id/next_action"
+                app:destination="@id/navigation_setup"/>
+        <argument
+                android:name="arenaPID"
+                app:argType="string"
+                android:defaultValue="0"/>
+        <argument
+                android:defaultValue="No Arena"
+                android:name="title"
+                app:argType="string"/>
+
+        <!--Navigate to Order-->
+        <action android:id="@+id/action_to_order"
+                app:destination="@id/navigation_order"/>
+
+        <!--Navigate to Profile-->
+        <action android:id="@+id/action_to_profile"
+                app:destination="@id/navigation_profile"/>
+
+        <!--Navigate to City List-->
+        <action android:id="@+id/action_to_city_list"
+                app:destination="@+id/navigation_city_list" app:popUpTo="@+id/navigation_home"
+                app:popUpToInclusive="true"/>
+
+        <action android:id="@+id/action_to_arena"
+                app:destination="@+id/navigation_arena"
+                app:popUpToInclusive="false"/>
+    </fragment>
+
+    <!--Orders-->
+
+    <fragment
+            android:id="@+id/navigation_order"
+            android:label="Оплаченные места"
+            android:name="ru.prsolution.winstrike.presentation.orders.OrderFragment"
+            tools:layout="@layout/fmt_nopaid"/>
+
+    <!--Profile-->
+    <fragment
+            android:id="@+id/navigation_profile"
+            tools:layout="@layout/fmt_profile_prof"
+            android:label="{userName}"
+            android:name="ru.prsolution.winstrike.presentation.profile.ProfileFragment">
+
+        <!--Navigate to Login-->
+        <action android:id="@+id/action_to_login"
+                app:destination="@id/navigation_login" app:popUpToInclusive="true"
+                app:popUpTo="@+id/navigation_profile"/>
+
+        <!--User name-->
+        <argument android:name="userName"
+                  android:defaultValue="Профиль"
+                  app:argType="string"/>
+
+        <!--Navigate to City List -->
+        <action android:id="@+id/action_to_city_list"
+                app:destination="@id/navigation_city_list"
+                app:popUpToInclusive="true" app:popUpTo="@+id/navigation_profile"/>
+    </fragment>
+
+    <!--SetUp -->
+    <fragment
+            android:id="@+id/navigation_setup"
+            android:label="Выберите время"
+            android:name="ru.prsolution.winstrike.presentation.setup.SetupFragment"
+            tools:layout="@layout/frm_setup">
+        <argument
+                android:name="seat"
+                android:defaultValue="@null"
+                app:argType="ru.prsolution.winstrike.domain.models.arena.SeatCarousel"
+                app:nullable="true"/>
+
+        <argument
+                android:name="activeLayoutPid"
+                app:argType="string"
+                android:defaultValue="0"/>
+        <action
+                android:id="@+id/next_action"
+                app:destination="@id/navigation_map"/>
+    </fragment>
+
+    <!--Map-->
+    <fragment
+            android:id="@+id/navigation_map"
+            android:label="Забронируйте место"
+            android:name="ru.prsolution.winstrike.presentation.map.MapFragment">
+        <action
+                android:id="@+id/next_action"
+                app:destination="@id/navigation_yandex"/>
+        <argument
+                android:name="acitveLayoutPID"
+                app:argType="string"
+                app:nullable="true" android:defaultValue="0"/>
+    </fragment>
+
+    <!--Yandex WebView-->
+    <fragment
+            android:id="@+id/navigation_yandex"
+            android:label="Оплата"
+            android:name="ru.prsolution.winstrike.presentation.payment.YandexWebViewFragment"
+            tools:layout="@layout/fmt_web_view">
+
+        <argument
+                android:name="url"
+                app:argType="string"
+                app:nullable="true" android:defaultValue="https://passport.yandex.ru/"/>
+    </fragment>
+
+
+</navigation>

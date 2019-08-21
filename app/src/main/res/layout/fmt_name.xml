@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_root"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:fragment =".">
+
+
+    <!--Image head-->
+    <View
+        android:id="@+id/v_oval"
+        android:layout_width="87dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="@dimen/spacing_50dp"
+        android:background="@drawable/sp_circle"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/image_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_unlock"
+        app:layout_constraintBottom_toBottomOf="@id/v_oval"
+        app:layout_constraintEnd_toEndOf="@id/v_oval"
+        app:layout_constraintStart_toStartOf="@id/v_oval"
+        app:layout_constraintTop_toTopOf="@id/v_oval"/>
+
+
+    <!--Title-->
+    <TextView
+        android:id="@+id/phone_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ripple_effect_title_click"
+        android:text="@string/helpunlock_title"
+        app:layout_constraintStart_toStartOf="@id/phone_hint_tv"
+        app:layout_constraintTop_toBottomOf="@id/v_oval"
+        android:textAppearance="@style/TextAppearance.Winstrike.Title"
+        android:textColor="@color/color_white" android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+
+    <!--Description -->
+    <TextView
+        android:id="@+id/phone_hint_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_40"
+        android:layout_marginEnd="@dimen/spacing_40"
+        android:layout_marginTop="7dp"
+        android:text="@string/helpunlock_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_label_tv"
+        android:textAppearance="@style/TextAppearance.Winstrike.Hint.Big"
+        android:textColor="@color/white"/>
+
+    <!--Code-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/code_til"
+        android:layout_width="288dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="@dimen/spacing_24"
+        app:layout_constraintTop_toBottomOf="@id/phone_hint_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/edit_text_shape"
+        android:gravity="center_vertical"
+        app:errorEnabled="true"
+        app:counterEnabled="false"
+        app:counterMaxLength="10"
+        android:backgroundTint="@color/blue_light"
+        app:counterTextAppearance="@style/TextAppearance.Winstrike.Content"
+        android:hint="Код подтверждения"
+        >
+        <TextView
+            android:id="@+id/et_sms_code"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:focusable="false"
+            tools:text="882922"
+            android:enabled="false"
+            android:layout_marginStart="@dimen/spacing_24"
+            android:background="@null"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--Next button-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_button"
+        android:layout_marginTop="@dimen/spacing_32"
+        android:text="@string/start_button_text"
+        android:enabled="true"
+        android:backgroundTint="@color/redd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_til"
+        style="@style/Widget.Winstrike.Button"
+        />
+
+    <!--Name-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_til"
+        android:layout_width="288dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/code_til"
+        android:layout_marginTop="@dimen/spacing_24"
+        android:background="@drawable/edit_text_shape"
+        android:gravity="center_vertical"
+        app:errorEnabled="true"
+        app:counterEnabled="false"
+        app:counterMaxLength="10"
+        android:backgroundTint="@color/blue_light"
+        app:counterTextAppearance="@style/TextAppearance.Winstrike.Content"
+        android:hint="Ваше имя"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/spacing_24"
+            android:background="@null"
+            android:inputType="textPersonName"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--Sms hint send by timer-->
+    <TextView
+        android:id="@+id/displayWorkTimeLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/spacing_20"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:layout_marginEnd="@dimen/spacing_8"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/politica_hint_tv"
+        tools:text="*Отправить код повторно через 30 сек"
+        android:textAppearance="@style/TextAppearance.Winstrike.Hint"
+        android:textColor="@color/color_white"/>
+
+    <!--Footer-->
+    <!--Politica text-->
+    <TextView
+        android:id="@+id/politica_hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_2"
+        android:text="@string/ac_login_hint_register"
+        app:layout_constraintBottom_toTopOf="@id/tv_name_policy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.Winstrike.Hint.Small"
+        android:textColor="@color/color_white"/>
+
+    <!--Politica condition-->
+    <TextView
+        android:id="@+id/tv_name_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_8"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:background="?selectableItemBackground"
+        tools:text="Условиями и Политикой конфиденциальности"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.Winstrike.Content.Small"
+        android:textColorLink="@color/redd" android:textColor="@color/color_white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/gradient"       tools:activity="ru.prsolution.winstrike.presentation.profile.ProfileTabFragment">
+
+
+    <!--User name -->
+    <include layout="@layout/inc_prof_name"/>
+
+    <!--User password -->
+    <include layout="@layout/inc_prof_password"/>
+
+    <!--User city -->
+    <include layout="@layout/inc_prof_city"/>
+
+    <!--Save button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:text="@string/all_savebtn"
+        android:enabled="true"
+        android:maxLines="1"
+        android:backgroundTint="@color/redd"
+        android:layout_marginTop="@dimen/spacing_48"
+        app:layout_constraintBottom_toBottomOf="@id/spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city"
+        style="@style/Widget.Winstrike.Button"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

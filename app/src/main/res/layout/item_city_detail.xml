@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/card_v"
+  android:layout_width="match_parent"
+  android:layout_height="72dp"
+  android:layout_gravity="center"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp"
+  android:foreground="?selectableItemBackground"
+  android:orientation="horizontal">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_gravity="center">
+
+
+    <!--City name-->
+    <TextView
+      android:id="@+id/city_tv"
+      style="@style/StemMedium20"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="32dp"
+      android:maxLines="1"
+      android:textAlignment="center"
+      android:textColor="@color/black"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Москва"
+      tools:textColor="@color/white"/>
+
+    <TextView
+      android:id="@+id/metro_tv"
+      style="@style/StemMedium15"
+      android:textColor="@color/black"
+      tools:textColor="@color/white"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      tools:text="TРС МЕТРО"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/city_tv"
+      />
+
+
+    <!--Checkbox-->
+
+    <ImageView
+      android:id="@+id/check_box_iv"
+      android:layout_width="18dp"
+      android:layout_height="12dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="24dp"
+      tools:src="@drawable/ic_check_white"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

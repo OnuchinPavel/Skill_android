@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/black</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorSecondary">@color/magenta</color>
+
+    <color name="magenta">#cd002c</color>
+    <color name="black">#ff1f1f1f</color>
+    <color name="white">#ffffff</color>
+    <color name="honeydew">#fff2f2f2</color>
+    <color name="grey">#ff9b9b9b</color>
+    <color name="greyLight">#A9A9A9</color>
+    <color name="darkGray">#424242</color>
+    <color name="red">#cd002c</color>
+    <color name="yellow">#F8C742</color>
+    <color name="purple">#6768E2</color>
+    <color name="blue">#0A5FFF</color>
+
+    <color name="rose">#f72d59</color>
+    <color name="redd">#cd002c</color>
+    <color name="blue_light">#cfeaff</color>
+    <color name="gray">#a8b3bd</color>
+    <color name="semiTransparentColor">#20ffffff</color>
+
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--User phone -->
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/phone_ti"
+    android:layout_width="288dp"
+    android:layout_height="56dp"
+    android:gravity="center_vertical"
+    android:layout_marginTop="@dimen/spacing_16"
+    app:layout_constraintTop_toBottomOf="@id/title"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:showIn="@layout/fmt_help_phone"
+    android:backgroundTint="@color/blue_light"
+    android:background="@drawable/edit_text_shape"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_phone_help"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="103dp"
+        android:maxLines="1"
+        android:hint="Номер телефона"
+        android:maxLength="15"
+        android:inputType="phone"
+        android:background="@null"
+        android:textAppearance="@style/TextAppearance.Winstrike.Content"
+        />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+

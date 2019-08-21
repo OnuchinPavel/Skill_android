@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/navigation_city_list"
+            android:icon="@drawable/ic_nav"
+            app:showAsAction="ifRoom"
+            android:title=""/>
+
+    <item android:id="@+id/action_to_login"
+          android:icon="@drawable/ic_signout"
+          android:title=""
+          app:showAsAction="ifRoom"
+    />
+
+
+    <item android:id="@+id/map_legend"
+          android:icon="@drawable/ic_question"
+          android:title=""
+          app:showAsAction="ifRoom"
+    />
+
+</menu>

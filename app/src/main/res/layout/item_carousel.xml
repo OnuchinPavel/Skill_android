@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <ru.prsolution.winstrike.presentation.main.carousel.CarouselLinearLayout
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/top_slider"
+    android:background="@android:color/transparent"
+    android:gravity="top|center"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+      <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/seat_image_iv"
+        android:layout_width="204dp"
+        android:layout_height="140dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:src="@drawable/event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="3dp"
+
+      />
+
+      <RelativeLayout android:layout_width="0dp"
+                      android:layout_height="0dp"
+                      app:layout_constraintStart_toStartOf="@+id/seat_image_iv"
+                      app:layout_constraintEnd_toEndOf="@+id/seat_image_iv"
+                      app:layout_constraintTop_toTopOf="@+id/seat_image_iv"
+                      app:layout_constraintBottom_toBottomOf="@+id/seat_image_iv"
+                      android:id="@+id/progress"
+                      android:visibility="visible"
+                      android:background="#E6ffffff"
+                      android:layout_gravity="center"
+                      android:orientation="horizontal">
+        <ProgressBar android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/progressBar"
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:indeterminate="true"
+                     android:layout_centerHorizontal="true"
+                     android:layout_centerVertical="true"/>
+
+      </RelativeLayout>
+
+      <TextView
+        android:id="@+id/seat_name_tv"
+        style="@style/StemRegular17OnPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Обычные"
+        app:layout_constraintBottom_toBottomOf="@id/seat_image_iv"
+        app:layout_constraintEnd_toEndOf="@id/seat_image_iv"
+        app:layout_constraintStart_toStartOf="@id/seat_image_iv"
+        app:layout_constraintTop_toTopOf="@id/seat_image_iv"
+        app:layout_constraintVertical_bias=".85"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ru.prsolution.winstrike.presentation.main.carousel.CarouselLinearLayout>
+</LinearLayout>

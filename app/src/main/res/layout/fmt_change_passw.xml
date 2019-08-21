@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="26dp"
+        android:gravity="center_horizontal"
+        android:text="Введите новый пароль"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.Winstrike.Title"
+        />
+
+
+    <!--First password field-->
+    <include layout="@layout/inc_help_password_top"/>
+
+    <!--Second password field-->
+    <include layout="@layout/inc_help_password_bottom"/>
+
+    <!--Save button-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_btn"
+        android:layout_marginTop="@dimen/spacing_32"
+        android:text="@string/all_savebtn"
+        android:enabled="true"
+        android:maxLines="1"
+        android:backgroundTint="@color/redd"
+        app:layout_constraintTop_toBottomOf="@+id/password_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Widget.Winstrike.Button"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent"
+    >
+
+    <!--Logo -->
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_logo_login"
+        android:src="@drawable/skill_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <!--User phone -->
+    <include layout="@layout/inc_phone"/>
+
+    <!--Country code-->
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/start_edit_24dp"
+
+        android:text="@string/all_phonemaskru"
+        app:layout_constraintBottom_toBottomOf="@id/phone_v"
+        app:layout_constraintStart_toStartOf="@id/phone_v"
+        app:layout_constraintTop_toTopOf="@id/phone_v"
+        android:textAppearance="@style/TextAppearance.Winstrike.Content"
+        />
+
+    <!--Divider line-->
+    <View
+        android:id="@+id/divider_v"
+        android:layout_width="1dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="15dp"
+        android:alpha=".2"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/phone_v"
+        app:layout_constraintStart_toEndOf="@id/tv_country"
+        app:layout_constraintTop_toTopOf="@id/phone_v"
+        />
+
+
+    <!--User password -->
+    <include layout="@layout/inc_password" app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="267dp" android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+
+    <!--Login button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        android:layout_marginTop="@dimen/spacing_32"
+        android:text="@string/login_enterbtn"
+        android:enabled="true"
+        android:backgroundTint="@color/redd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_til"
+        style="@style/Widget.Winstrike.Button"
+        />
+
+    <!--Hint text-->
+    <TextView
+        android:id="@+id/hint_login_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_hint"
+        android:layout_marginTop="@dimen/spacing_20"
+        app:layout_constraintBottom_toTopOf="@id/help_link_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_button"
+        android:textAppearance="@style/TextAppearance.Winstrike.Hint"
+        />
+
+    <!--Help link -->
+    <TextView
+        android:id="@+id/help_link_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:text="@string/login_helplink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hint_login_tv"
+        android:focusable="true"
+        android:textAppearance="@style/TextAppearance.Winstrike.Title"
+        android:textColor="#ff9b9b9b"
+        android:textColorLink="#ff9b9b9b"/>
+
+    <!--SingUp text link-->
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_15"
+        android:layout_marginEnd="@dimen/spacing_10"
+        android:layout_marginStart="@dimen/spacing_10"
+        tools:text="Еще нет аккаунта? Зарегистрируйтесь"
+        android:background="?selectableItemBackground"
+        app:layout_constraintBottom_toTopOf="@id/politica_hint_tv"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.Winstrike.Content"
+        android:textColor="#ff9b9b9b" android:textColorLink="@color/redd"/>
+
+
+    <!--Politica text-->
+    <TextView
+        android:id="@+id/politica_hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_2"
+        android:text="@string/ac_login_hint_register"
+        app:layout_constraintBottom_toTopOf="@id/tv_conditions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.Winstrike.Hint.Small"
+        />
+
+    <!--Politica condition-->
+    <TextView
+        android:id="@+id/tv_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_8"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:background="?selectableItemBackground"
+        tools:text="Условиями и Политикой конфиденциальности"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.Winstrike.Content.Small"
+        android:textColorLink="@color/redd"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

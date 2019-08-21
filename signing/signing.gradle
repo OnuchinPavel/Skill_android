@@ -1,0 +1,46 @@
+task signDebugBuild(type: Task, dependsOn: "assembleDebug") {
+    println ":: Signing debug build...${android.signingConfigs}"
+    initSigningProperties(DEBUG_FOLDER, android.signingConfigs.debug);
+}
+
+task signReleaseBuild(type: Task, dependsOn: "assembleRelease") {
+    println ":: Signing release build...${android.signingConfigs}"
+    initSigningProperties(RELEASE_FOLDER, android.signingConfigs.release);
+}
+
+def initSigningProperties(folder, config) {
+    println ":: Initialize signing properties with folder: ${folder}"
+
+    Properties props = new Properties()
+
+    println ":: Initialize signing properties with folder: ${folder}"
+    def propFile = file("${SIGNING_FOLDER}${folder}${SIGNING_PROPERTIES}")
+
+    if (propFile.canRead()) {
+        props.load(new FileInputStream(propFile))
+        if (props != null
+                && props.containsKey("KEYSTORE_FILE")
+                && props.containsKey("KEYSTORE_PASSWORD")
+                && props.containsKey("KEY_ALIAS")
+                && props.containsKey("KEY_PASSWORD")) {
+            def filePath = "${SIGNING_FOLDER}${folder}${props["KEYSTORE_FILE"]}"
+            def keystoreFile = file(filePath)
+            if (keystoreFile.canRead()) {
+                config.storeFile = keystoreFile
+                config.storePassword = props["KEYSTORE_PASSWORD"]
+                config.keyAlias = props["KEY_ALIAS"]
+                config.keyPassword = props["KEY_PASSWORD"]
+
+                println ":: Build is signed."
+            } else {
+                println ":: [ERROR] Can't read keystoreFile (${keystoreFile})."
+            }
+        } else {
+            println ":: [ERROR] Not found all keys in ${SIGNING_PROPERTIES}"
+        }
+    } else {
+        println ":: [ERROR] Can't read properties file (${propFile})."
+    }
+
+}
+

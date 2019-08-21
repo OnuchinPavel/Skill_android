@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+android:background="@drawable/gradient"
+    android:layout_height="match_parent"
+    tools:activity="ru.prsolution.winstrike.presentation.profile.AppTabFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="75dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="14dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="346dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_estimate"
+        android:layout_width="120dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:transitionName="bonusTransitionName"
+        app:layout_constraintEnd_toStartOf="@+id/cv_recomend"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_head"
+        app:cardCornerRadius="6dp">
+
+        <TextView
+            android:id="@+id/bonus_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="@string/profileapp_estimate"
+            android:textSize="12sp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_recomend"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_recomend"
+        android:layout_width="120dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cv_estimate"
+        app:layout_constraintTop_toBottomOf="@id/line_head"
+        app:cardCornerRadius="6dp">
+
+        <TextView
+            android:id="@+id/fav_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/profileapp_share"
+            android:textSize="@dimen/app_recomend"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_handshake"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Switch
+        android:id="@+id/sw_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:checked="true"
+        android:textColor="@color/white"
+        android:text="Уведомления"
+        android:textOff="No"
+        android:textOn="Yes"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/line_end"
+        app:layout_constraintStart_toStartOf="@id/line_start"
+        app:layout_constraintTop_toBottomOf="@id/line_head"/>
+
+    <TextView
+        android:id="@+id/text_social"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:textColor="@color/white"
+        android:text="@string/all_social"
+        app:layout_constraintEnd_toEndOf="@id/line_end"
+        app:layout_constraintStart_toStartOf="@id/line_start"
+        app:layout_constraintTop_toBottomOf="@id/line_head"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        />
+
+    <!-- Icons block -->
+
+    <ImageView
+        android:id="@+id/icon_vk"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margingtop_socicons"
+        android:src="@drawable/ic_vk"
+        app:layout_constraintEnd_toStartOf="@+id/icon_instagram"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_social"/>
+
+    <View
+        android:id="@+id/v_vk"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:backgroundTint="@color/redd"
+        android:foreground="@drawable/ripple_effect_circle"
+        app:layout_constraintBottom_toBottomOf="@id/icon_vk"
+        app:layout_constraintEnd_toEndOf="@id/icon_vk"
+        app:layout_constraintStart_toStartOf="@id/icon_vk"
+        app:layout_constraintTop_toTopOf="@id/icon_vk"/>
+
+    <ImageView
+        android:id="@+id/icon_instagram"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margingtop_socicons"
+        android:src="@drawable/ic_instagram"
+        app:layout_constraintEnd_toStartOf="@+id/icon_tweeter"
+        app:layout_constraintStart_toEndOf="@id/icon_vk"
+        app:layout_constraintTop_toBottomOf="@id/text_social"/>
+
+    <View
+        android:id="@+id/v_instagram"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:backgroundTint="@color/redd"
+        android:foreground="@drawable/ripple_effect_circle"
+        app:layout_constraintBottom_toBottomOf="@id/icon_instagram"
+        app:layout_constraintEnd_toEndOf="@id/icon_instagram"
+        app:layout_constraintStart_toStartOf="@id/icon_instagram"
+        app:layout_constraintTop_toTopOf="@id/icon_instagram"/>
+
+    <ImageView
+        android:id="@+id/icon_tweeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margingtop_socicons"
+        android:src="@drawable/ic_twitter"
+        app:layout_constraintEnd_toStartOf="@id/icon_facebook"
+        app:layout_constraintStart_toEndOf="@id/icon_instagram"
+        app:layout_constraintTop_toBottomOf="@id/text_social"/>
+
+    <View
+        android:id="@+id/v_tweeter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:backgroundTint="@color/redd"
+        android:foreground="@drawable/ripple_effect_circle"
+        app:layout_constraintBottom_toBottomOf="@id/icon_tweeter"
+        app:layout_constraintEnd_toEndOf="@id/icon_tweeter"
+        app:layout_constraintStart_toStartOf="@id/icon_tweeter"
+        app:layout_constraintTop_toTopOf="@id/icon_tweeter"/>
+
+    <ImageView
+        android:id="@+id/icon_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margingtop_socicons"
+        android:src="@drawable/ic_facebook"
+        app:layout_constraintEnd_toStartOf="@id/icon_twitch"
+        app:layout_constraintStart_toEndOf="@id/icon_tweeter"
+        app:layout_constraintTop_toBottomOf="@id/text_social"/>
+
+    <View
+        android:id="@+id/v_facebook"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:backgroundTint="@color/redd"
+        android:foreground="@drawable/ripple_effect_circle"
+        app:layout_constraintBottom_toBottomOf="@id/icon_facebook"
+        app:layout_constraintEnd_toEndOf="@id/icon_facebook"
+        app:layout_constraintStart_toStartOf="@id/icon_facebook"
+        app:layout_constraintTop_toTopOf="@id/icon_facebook"/>
+
+    <ImageView
+        android:id="@+id/icon_twitch"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margingtop_socicons"
+        android:src="@drawable/ic_twitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon_facebook"
+        app:layout_constraintTop_toBottomOf="@id/text_social"/>
+
+    <View
+        android:id="@+id/v_twitch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:backgroundTint="@color/redd"
+        android:foreground="@drawable/ripple_effect_circle"
+        app:layout_constraintBottom_toBottomOf="@id/icon_twitch"
+        app:layout_constraintEnd_toEndOf="@id/icon_twitch"
+        app:layout_constraintStart_toStartOf="@id/icon_twitch"
+        app:layout_constraintTop_toTopOf="@id/icon_twitch"/>
+    <!-- Icons block -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

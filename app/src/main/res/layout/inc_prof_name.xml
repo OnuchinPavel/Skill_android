@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--User phone -->
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/fio"
+    android:layout_width="288dp"
+    android:layout_height="56dp"
+    android:gravity="center_vertical"
+    android:backgroundTint="@color/blue_light"
+    android:layout_marginTop="@dimen/spacing_32"
+
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+
+    android:background="@drawable/edit_text_shape"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/fmt_profile_prof"
+    >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_name_prof"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/start_edit_25dp"
+        android:layout_marginBottom="8dp"
+        android:maxLines="1"
+        android:hint="Имя"
+        android:maxLength="15"
+        android:inputType="textPersonName"
+        android:background="@null"
+        android:textAppearance="@style/TextAppearance.Winstrike.Content"
+        />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+

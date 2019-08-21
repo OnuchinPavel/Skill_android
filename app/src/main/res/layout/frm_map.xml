@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradient"
+    android:fillViewport="true">
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:fillViewport="true"
+        >
+
+        <ru.prsolution.winstrike.presentation.utils.custom.ZoomLayout
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/redd"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/rootMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:indeterminate="true"
+                    android:visibility="visible"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    tools:visibility="visible"/>
+
+            </RelativeLayout>
+
+        </ru.prsolution.winstrike.presentation.utils.custom.ZoomLayout>
+    </HorizontalScrollView>
+</ScrollView>
+
+

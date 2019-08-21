@@ -1,0 +1,31 @@
+<resources>
+
+    <!--Base theme-->
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/redd</item>
+        <item name="colorPrimaryDark">?themePrimaryDark</item>
+        <item name="colorSecondary">@color/redd</item>
+        <item name="android:colorAccent">@color/redd</item>
+
+    </style>
+
+    <!--Custom  theme-->
+    <style name="BaseAppTheme.WinstrikeApp">
+        <item name="themePrimary">@color/redd</item>
+        <item name="themePrimaryDark">@color/black</item>
+        <item name="themeSecondary">@color/redd</item>
+        <item name="themeContentBackground">@color/white</item>
+        <item name="android:colorAccent">@color/redd</item>
+
+        <!--Base colors-->
+        <item name="themeContentTextColor">@color/black</item>
+        <item name="themeContentTextColoOnPrimary">@color/white</item>
+
+        <!--Material dialogs-->
+        <!--<item name="md_color_title">?themePrimaryDark</item>-->
+        <!--<dimen name="md_action_button_textsize">14sp</dimen>-->
+        <!--<dimen name="md_title_textsize">20sp</dimen>-->
+        <!--<dimen name="md_message_textsize">16sp</dimen>-->
+    </style>
+
+</resources>

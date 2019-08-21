@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:background="@drawable/gradient"
+        android:layout_height="match_parent"
+        >
+
+        <!--Title-->
+        <TextView
+            android:id="@+id/seat_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_alignStart="@id/head_image"
+            app:layout_constraintStart_toStartOf="@id/head_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Вы выбрали: VIP место"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.Winstrike.Title"
+            />
+
+        <!--Seat image-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/head_image"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seat_name_tv"
+            app:roundedCornerRadius="5dp"/>
+
+        <RelativeLayout android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/head_image"
+            app:layout_constraintEnd_toEndOf="@+id/head_image"
+            app:layout_constraintTop_toTopOf="@+id/head_image"
+            app:layout_constraintBottom_toBottomOf="@+id/head_image"
+            android:id="@+id/progressHeadImage"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ProgressBar android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressImage"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <!--Seat descriptions-->
+        <TextView
+            android:id="@+id/cpu"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/start_head"
+            android:layout_marginEnd="@dimen/start_head"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/head_image"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            tools:text="ПК: Intel Core i5-8600K | 16GB DDR4 | 512 GB SSD NVMe &amp; 2TB 7200 | nVidia GTX 1070 8GB Монитор: LG 34 &quot; 34UC79G 144hz \\ LG 32 &quot; 32GK850G 144hz \\ LG 24 &quot; 24GM79G 144hz Гарнитура: Logitech G PRO \\ Logitech G231 \\ Logitech Headset G433 Клавиатура: Logitech G512 Carbon Mechanical GX Blue Мышь: Logitech G102 Prodigy \\ Logitech G403 Prodigy kkk ПК: Intel Core i5-8600K | 16GB DDR4 | 512 GB SSD NVMe &amp; 2TB 7200 | nVidia GTX 1070 8GB Монитор: LG 34 &quot; 34UC79G 144hz \\ LG 32 &quot; 32GK850G 144hz \\ LG 24 &quot; 24GM79G 144hz Гарнитура: Logitech G PRO \\ Logitech G231 \\ Logitech Headset G433 Клавиатура: Logitech G512 Carbon Mechanical GX Blue Мышь: Logitech G102 Prodigy \\ Logitech G403 Prodigy kkk sssssssssssss ssssssssssssss ssssssssssssss ssssssssssss"/>
+
+        <!--Date title-->
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:focusable="true"
+            android:clickable="true"
+            app:layout_constraintStart_toStartOf="@id/head_image"
+            app:layout_constraintTop_toBottomOf="@id/cpu"
+            tools:text="@string/seatdetail_date"
+            android:textAppearance="@style/TextAppearance.Winstrike.Title"
+            android:textColor="@color/color_white"/>
+
+        <!--Date arrow select-->
+        <ImageView
+            android:id="@+id/iv_arr_date"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignTop="@id/tv_date"
+            android:src="@drawable/ic_down_arrow"
+            app:layout_constraintEnd_toEndOf="@id/head_image"
+            app:layout_constraintTop_toTopOf="@id/tv_date"/>
+
+        <View
+            android:id="@+id/v_date_tap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/iv_arr_date"
+            android:layout_alignEnd="@id/head_image"
+            app:layout_constraintEnd_toEndOf="@id/head_image"
+            app:layout_constraintTop_toBottomOf="@id/cpu"/>
+
+        <!--Time title-->
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:focusable="true"
+            android:clickable="true"
+            app:layout_constraintStart_toStartOf="@id/head_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_date"
+            tools:text="@string/seatdetail_time"
+            android:textAppearance="@style/TextAppearance.Winstrike.Title"
+            android:textColor="@color/color_white"/>
+
+        <!--Time arrow-->
+        <View
+            android:id="@+id/v_time_tap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_alignBottom="@id/iv_arr_time"
+            android:layout_alignEnd="@id/head_image"
+            app:layout_constraintEnd_toEndOf="@id/head_image"
+            app:layout_constraintTop_toBottomOf="@id/v_date_tap"/>
+
+        <ImageView
+            android:id="@+id/iv_arr_time"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignEnd="@id/head_image"
+            android:layout_alignTop="@id/tv_time"
+            android:src="@drawable/ic_down_arrow"
+            app:layout_constraintEnd_toEndOf="@id/head_image"
+            app:layout_constraintTop_toTopOf="@id/tv_time"
+            tools:ignore="ContentDescription"/>
+
+
+        <!--Next button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:text="@string/seatdetail_btn"
+            android:enabled="true"
+            android:maxLines="1"
+            android:backgroundTint="@color/colorSecondary"
+            app:layout_constraintBottom_toBottomOf="@id/spacer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_time"
+            style="@style/Widget.Winstrike.Button"
+            />
+
+
+        <Space
+            android:id="@+id/spacer"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/next_button"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-15dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintTop_toBottomOf="@id/spacer"
+            tools:visibility="visible"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

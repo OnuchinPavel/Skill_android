@@ -1,0 +1,74 @@
+{
+  "project_info": {
+    "project_number": "985917830021",
+    "firebase_url": "https://winststrike.firebaseio.com",
+    "project_id": "winststrike",
+    "storage_bucket": "winststrike.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985917830021:android:0418e4dbf12230ff",
+        "android_client_info": {
+          "package_name": "ru.prsolution.winstrike"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985917830021-rjd78cif57cpt1qnkn9h5tl0dgb7fcm1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.prsolution.winstrike",
+            "certificate_hash": "54497ac208edf93fc72bfe48c8e0356c806a3b6c"
+          }
+        },
+        {
+          "client_id": "985917830021-6knilbb2rujhrhvjesh40c74ibuf5p4a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.prsolution.winstrike",
+            "certificate_hash": "5e91ad43f611e2df5a34764088cfb49d5887ff9d"
+          }
+        },
+        {
+          "client_id": "985917830021-r7rf7brfjnmpipjuj5rmnl1um0a9r7ff.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "985917830021-r7rf7brfjnmpipjuj5rmnl1um0a9r7ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHsUU4PMob_1hZfa-AasE6GpGyViNEZrk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985917830021-r7rf7brfjnmpipjuj5rmnl1um0a9r7ff.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "985917830021-hpfrtctkn2k1dfmetb446so1lpb1ll8r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ru.prsolution.winstrike"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

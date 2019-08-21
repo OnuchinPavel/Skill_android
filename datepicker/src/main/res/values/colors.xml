@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/color_primary</color>
+    <color name="colorPrimaryDark">@color/color_primary_dark</color>
+    <color name="colorAccent">@color/color_accent</color>
+
+    <color name="color_primary">#ffffff</color>
+    <color name="color_accent">#ffc9186c</color>
+    <color name="color_primary_dark">#ff161715</color>
+    <color name="color_black">#ff1f1f1f</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_grey">#ff9b9b9b</color>
+    <color name="color_grey_select">#F2F2F2</color>
+    <color name="color_ripple">#bab7b7</color>
+
+    <color name="wnsLightGrey">#A9A9A9</color>
+
+    <color name="seat_red">#db486e</color>
+    <color name="seat_yellow">#F8C742</color>
+    <color name="seat_gray">#939598</color>
+    <color name="seat_darkgray">#424242</color>
+    <color name="seat_blue">#6768E2</color>
+    <color name="seat_picked">@color/color_white</color>
+
+    <color name="ios_ok">#0A5FFF</color>
+
+    <color name="label_gray">#bbbbbb</color>
+
+
+</resources>

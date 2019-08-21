@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name">SKILL</string>
+    <string name="app_arena_1">Skill Arena</string>
+    <string name="app_arena_2">Skill Corner</string>
+    <string name="all_nextbtn">Далее</string>
+    <string name="all_savebtn">Сохранить</string>
+    <string name="all_enterbtn">Войти</string>
+    <string name="all_social">Мы в соц. сетях</string>
+    <string name="all_fio">Имя Фамилия</string>
+    <string name="all_password_old">Пароль</string>
+    <string name="all_entercode">Введите код подтверждения</string>
+    <string name="all_hintcode">Введите код подтверждения</string>
+    <string name="all_toolbartitle">Москва</string>
+    <string name="all_phonemaskru">RU +7</string>
+    <string name="pres1_title">Выбирайте компьютер</string>
+    <string name="pres1_detail1">Выбирайте компьютер в игровом клубе\n в вашем городе</string>
+    <string name="pres2_title">Забукируйте компьютер</string>
+    <string name="pres2_detail">Забукируйте игровой компьютер\n в игровом клубе в вашем городе на\n любое удобное для вас время </string>
+    <string name="pres3_title">Следите за новостями и\n участвуйте в турнирах </string>
+    <string name="pres3_detail">Следите за новостями, чтобы быть в\n курсе событий. Принимайте участие в\n турнирах по online-играм</string>
+    <string name="login_password_hint">Пароль</string>
+    <string name="login_enterbtn">Вход</string>
+    <string name="login_hint">Забыли данные для входа?</string>
+    <string name="login_helplink"><u>Помощь со входом в систему</u></string>
+    <string name="login_entersocial">Войти через</string>
+    <string name="help_title">Помощь при входе</string>
+    <string name="help_menu_title">Восстановить пароль</string>
+    <string name="help_menu_sms">Отправить SMS</string>
+    <string name="help_center_title">Справочный центр</string>
+    <string name="help_winstrike_title">Справочный центр Winstrike</string>
+    <string name="help_account_title">Доступ к вашему аккаунту</string>
+    <string name="helpsms_hintsend">*Отправить код повторно через 30 сек</string>
+    <string name="helpunlock_description">Введите 6-значный код, который был отправлен на номер +7 (987) 654-32-10.</string>
+    <string name="helpunlock_title">Вам был отправлен код</string>
+    <string name="reg_phonetitle">Введите номер своего телефона</string>
+    <string name="reg_password">Введите пароль</string>
+    <string name="reg_codehint">*Сюда будет выслан код подтверждения</string>
+    <string name="sharedlg_title">Поделись приложением с друзьями</string>
+    <string name="sharedlg_titlebonus">и получи бонус!</string>
+    <string name="seatdetail_titlethumb">Winstrike</string>
+    <string name="seatdetail_description">Winstrike Arena - это 1000 кв.м. киберспорта в самом центре Москвы.
+90 компьютеров, VIP-комнаты с приставками PS4,
+бар для просмотра турниров
+и уникальная стримерская студия</string>
+    <string name="seatdetail_catseat">Категории мест</string>
+    <string name="seatdetail_title">Вы выбрали: Обычное место</string>
+    <string name="seatdetail_gear">Gear</string>
+    <string name="seatdetail_cpu">CPU: Intel core i5 8400k</string>
+    <string name="seatdetail_ram">RAM: 8Gb; SSD 120Gb+HDD 1Tb</string>
+    <string name="seatdetail_gpu">GPU: Nvidia GTX 1060 3Gb</string>
+    <string name="seatdetail_monitor">Monitor: BenQ ZOWIE XL2430 114Hz</string>
+    <string name="seatdetail_date">Выберите дату</string>
+    <string name="seatdetail_time">Укажите диапазон времени</string>
+    <string name="seatdetail_btn">Выбрать места</string>
+    <string name="seatdetail_category">Категории мест</string>
+    <string name="club_name">Компьютерный клуб «Winstrike Arena»</string>
+    <string name="club_full_name">Многофункциональный киберспортивный комплекс\n Winstrike Arena</string>
+    <string name="profileapp_estimate">Оцените приложение</string>
+    <string name="profileapp_share">Рекомендовать другу</string>
+    <string name="itempaid_date">Дата</string>
+    <string name="spin_address1">Лубянка</string>
+    <string name="spin_address2">Полежаевская</string>
+    <string name="spin_arena1">Winstrike Arena</string>
+    <string name="spin_arena2">Winstrike Corner</string>
+    <string name="itempaid_dateval">15 декабря 2017 г</string>
+    <string name="itempaid_time">Время</string>
+    <string name="itempaid_timeval">10:00-11:00</string>
+    <string name="itempaid_pc">Игровой компьютер</string>
+    <string name="itempaid_pccode">Код для компьютера</string>
+    <string name="itempaid_pccodeval">XFG124JK</string>
+    <string name="politica">Политика конфиденциальности</string>
+    <string name="toast_wrong_range">Выбранное время выходит за рамки рабочего времени арены</string>
+    <string name="no_paid_seat">У вас нет оплаченых мест</string>
+
+    <!--Calendar month-->
+    <array name="material_calendar_months_array">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </array>
+
+    <!--Calendar date of week-->
+    <string name="material_calendar_monday">Пн</string>
+    <string name="material_calendar_tuesday">Вт</string>
+    <string name="material_calendar_wednesday">Ср</string>
+    <string name="material_calendar_thursday">Чт</string>
+    <string name="material_calendar_friday">Пт</string>
+    <string name="material_calendar_saturday">Сб</string>
+    <string name="material_calendar_sunday">Вс</string>
+
+    <!--Calendar buttons-->
+    <string name="material_calendar_today_button" />
+    <string name="material_calendar_positive_button">Выбрать</string>
+    <string name="material_calendar_negative_button" />
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="first_select_date">Сначала выберите дату!</string>
+    <string name="loading_seats">Загрузка мест...</string>
+    <string name="not_working_range">Выбран не рабочий диапазон времени</string>
+    <string name="server_error_502">Невозможно получить места. Внутренняя ошибка сервера</string>
+
+    <string name="name_mercury">Winstrike Arena</string>
+    <string name="name_venus">Winstrike Corner</string>
+
+    <string name="distance_mercury">0.4 </string>
+    <string name="distance_venus">0.7 </string>
+    <string name="title_payment">Оплата</string>
+    <string name="title_profile">Профиль</string>
+    <string name="title_app">Приложение</string>
+    <string name="message_password">Введите текущий пароль</string>
+    <string name="message_username">Введите имя пользователя</string>
+    <string name="message_on_failure_profile_update">Не удалось обновить профиль</string>
+    <string name="message_on_success_profile_update">Профиль успешно обновлен</string>
+    <string name="title_payment_places">Оплаченные места</string>
+    <string name="message_share_images">Winstrike Arena - киберспорт в центре Москвы. Качай приложение и играй за 50 рублей/час</string>
+    <string name="title_settings">Настройки</string>
+    <string name="tag_main">MAIN</string>
+    <string name="tag_places">PLACES</string>
+    <string name="tag_user">USER</string>
+    <string name="tag_choose">CHOOSE</string>
+    <string name="tag_map">MAP</string>
+    <string name="tag_pay">PAY</string>
+    <string name="msg_server_internal_err">Внутренняя ошибка сервера: %s</string>
+    <string name="msg_server_500">500</string>
+    <string name="msg_server_400">400</string>
+    <string name="msg_server_401">401</string>
+    <string name="msg_serve_403">403</string>
+    <string name="msg_server_404">404</string>
+    <string name="msg_server_405">405</string>
+    <string name="msg_server_424">424</string>
+    <string name="msg_server_416">416</string>
+    <string name="msg_no_data">Нет данных: %s</string>
+    <string name="msg_no_auth">Пользователь не авторизован</string>
+    <string name="msg_auth_err">Ошибка авторизации пользователя</string>
+    <string name="msg_no_seat_with_id">В базе нет мест с таким public_id: %s</string>
+    <string name="msg_auth_error">Ошибка авторизации пользователя. Выйдите из приложение и зайдите снова.</string>
+    <string name="msg_date_error">Не правильно выбрана дата</string>
+    <string name="msg_booking_error">Не удается забронировать место на указанный интервал времени.</string>
+    <string name="msg_bookin_err">Не удается забронировать место.</string>
+    <string name="saved_arena">SAVED_ARENA</string>
+    <string name="vip_lg_sennheiser">VIP LG &amp; Sennheiser</string>
+    <string name="vip_hall">VIP room</string>
+    <string name="common_hall">Общий зал</string>
+    <string name="empty_hall">Empty hall</string>
+
+    <string name="settings">Settings</string>
+    <string name="title_home">Домой</string>
+    <string name="title_places">Места</string>
+    <string name="title_notifications">Профиль</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ac_login_hint_register">Регистрируясь, вы соглашаетесь с нашими</string>
+    <string name="ac_login_message_phone_hint">Введите номер телефона</string>
+    <string name="ac_login_error_password">Пароль не должен быть пустым</string>
+    <string name="ac_login_error_phone">Номер телефона не верный</string>
+    <string name="ac_login_error_password_lengh">Длина пароля должна не менее 6 символов</string>
+    <string name="fmt_code_error_lengh">Длина кода должна не менее 6 символов</string>
+    <string name="fmt_name_error_lengh">Длина имени должна не менее 4 символов</string>
+    <string name="ac_login_error_user_not_found">Пользователь не найден</string>
+    <string name="fmt_login_error_password_wrong">Не верный пароль</string>
+    <string name="fmt_title_condition">Условия использования</string>
+    <string name="fmt_login_title_politika">Политика конфиденциальности</string>
+    <string name="fmt_login_politika_footer">Условиями и Политикой конфиденциальности</string>
+    <string name="fmt_login_title_register">Еще нет аккаунта? Зарегистрируйтесь</string>
+    <string name="fmt_register_message_enter">Уже есть аккуунт? Войдите</string>
+    <string name="start_button_text">Поехали!</string>
+    <string name="fmt_login_server_error">Ошибка сервера</string>
+    <string name="fmt_login_noinet">No Internet Connection!</string>
+    <string name="fmt_login_message_noinet">Интернет подключение не доступно!</string>
+    <string name="ac_main_message_title">Вышла новая версия приложения</string>
+    <string name="ac_main_message_app_version_message">Перейти в Play Market, чтобы установить новую версию для
+        корректной работы приложения
+    </string>
+    <string name="ac_main_app_version_dialog_ok_btn">Продолжить</string>
+    <string name="ac_main_app_version_dialog_cancel_btn">Отменить</string>
+    <string name="message_error_auth">Ошибка авторизации. Зайдите в меню Профиль и нажмите на кнопку выхода из приложения.</string>
+    <string name="error_loading_image">Ошибка загрузки изображения</string>
+</resources>

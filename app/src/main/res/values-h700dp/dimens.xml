@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="top_logo_115dp">115dp</dimen>
+    <dimen name="height_tumb_195dp">195dp</dimen>
+    <dimen name="spacing_logo_login">56dp</dimen>
+    <dimen name="spacing_lang_loging">67dp</dimen>
+    <dimen name="spacing_hint_loging">40dp</dimen>
+    <dimen name="spacing_login_icons">24dp</dimen>
+    <dimen name="spacing_56dp">56dp</dimen>
+    <dimen name="spacing_50dp">50dp</dimen>
+    <dimen name="space_loop_hour">300dp</dimen>
+    <dimen name="space_loop_min">300dp</dimen>
+    <dimen name="space_vp_seat">180dp</dimen>
+    <dimen name="space_title_pres2">40dp</dimen>
+    <dimen name="space_detail_">16dp</dimen>
+    <dimen name="space_title_pres3">20dp</dimen>
+    <dimen name="number_height">250dp</dimen>
+    <!--Carousel sliders (Samsung gs7)-->
+    <dimen name="space_category_seat">16dp</dimen>
+    <dimen name="top_slider">10dp</dimen>
+    <dimen name="start_head">16dp</dimen>
+    <dimen name="space_head">50dp</dimen>
+    <dimen name="space_text">-30dp</dimen>
+    <dimen name="hall_line_lengh">200dp</dimen>
+    <dimen name="button_space">56dp</dimen>
+    <dimen name="app_recomend">12sp</dimen>
+    <dimen name="log_lg_top">80dp</dimen>
+</resources>

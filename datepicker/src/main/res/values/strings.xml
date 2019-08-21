@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">datepicker</string>
+    <string name="timedlg_title">Установите время</string>
+    <string name="timedlg_detail">Выберите количество часов в клубе</string>
+    <string name="timedlg_from">c</string>
+    <string name="timedlg_fromhour">9</string>
+    <string name="timedlg_sephour">:</string>
+    <string name="timedlg_to">до</string>
+    <string name="timedlg_tohour">13</string>
+    <string name="timedlg_septo">:</string>
+    <string name="timedlg_tomin">00</string>
+    <string name="timedlg_btnclose">Продолжить</string>
+</resources>

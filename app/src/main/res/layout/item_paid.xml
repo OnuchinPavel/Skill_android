@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="3dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/gradient"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/keyline_40dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/keyline_40dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/height_toolbar_56dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/height_statusbar_14dp"/>
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/width_tumb_294dp"
+            android:layout_height="@dimen/height_tumb_140dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_screen"
+            app:layout_constraintEnd_toEndOf="@id/line_end"
+            app:layout_constraintStart_toStartOf="@id/line_start"
+            app:layout_constraintTop_toBottomOf="@id/club_name"
+            />
+
+        <TextView
+            android:id="@+id/club_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/spacing_16"
+            app:layout_constraintBottom_toTopOf="@id/thumbnail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/club_name"
+            android:textAppearance="@style/TextAppearance.Winstrike.Title"
+            />
+
+        <TextView
+            android:id="@+id/date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/itempaid_date"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/thumbnail"
+            android:textAppearance="@style/TextAppearance.Winstrike.Hint.Big"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/date_title"
+            tools:text="@string/itempaid_dateval"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/itempaid_time"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/date"
+            android:textAppearance="@style/TextAppearance.Winstrike.Hint.Big"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/time_title"
+            tools:text="@string/itempaid_timeval"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/computer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/itempaid_pc"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/time"
+            android:textAppearance="@style/TextAppearance.Winstrike.Hint.Big"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/compute_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/computer_title"
+            tools:text="Место 1 (Обычное) Serpuhov"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/code_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Код для компьютера"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/compute_name"
+            android:textAppearance="@style/TextAppearance.Winstrike.Hint.Big"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/code_title"
+            tools:text="@string/itempaid_pccodeval"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/cost_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Стоимость"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/code"
+            android:textAppearance="@style/TextAppearance.Winstrike.Hint.Big"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@id/cost_title"
+            tools:text="100 р"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            android:textColor="@color/color_white"/>
+
+
+<!--        <View-->
+<!--            android:id="@+id/v_separator"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="5dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:background="@drawable/main_shadow_separator"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/cost"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

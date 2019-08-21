@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    tools:activity="ru.prsolution.winstrike.common.fragment.RegPhoneFragment">
+
+    <View
+        android:id="@+id/v_oval"
+        android:layout_width="87dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/sp_circle"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--Phone image-->
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/v_oval"
+        app:layout_constraintEnd_toEndOf="@id/v_oval"
+        app:layout_constraintStart_toStartOf="@id/v_oval"
+        app:layout_constraintTop_toTopOf="@id/v_oval"
+        app:srcCompat="@drawable/ic_phone"
+        tools:ignore="ContentDescription"
+        />
+
+    <!--// Phone-->
+    <include layout="@layout/inc_phone"/>
+
+
+    <!--Phone Country code-->
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/start_edit_24dp"
+        android:text="@string/all_phonemaskru"
+        app:layout_constraintBottom_toBottomOf="@id/phone_v"
+        app:layout_constraintStart_toStartOf="@id/phone_v"
+        app:layout_constraintTop_toTopOf="@id/phone_v"
+        android:textAppearance="@style/TextAppearance.Winstrike.Content"
+        />
+
+    <!--Phone Divider line-->
+    <View
+        android:id="@+id/divider_v"
+        android:layout_width="1dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="15dp"
+        android:alpha=".2"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/phone_v"
+        app:layout_constraintStart_toEndOf="@id/tv_country"
+        app:layout_constraintTop_toTopOf="@id/phone_v"
+        />
+
+
+    <!--// Password-->
+    <include layout="@layout/inc_password"/>
+
+
+    <!--Next button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register_button"
+        android:layout_marginTop="@dimen/spacing_32"
+        android:text="@string/all_nextbtn"
+        android:enabled="true"
+        android:backgroundTint="@color/redd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_til"
+        style="@style/Widget.Winstrike.Button"
+        />
+
+
+    <!--// TODO: make it spannable-->
+    <!--// Footer -->
+    <TextView
+        android:id="@+id/tv_register_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_15"
+        tools:text="Уже есть аккаунт? Войдите"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAppearance="@style/TextAppearance.Winstrike.Hint.Big"
+        android:textColorLink="@color/redd"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,136 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        tools:activity=".presentation.main.MainScreenActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="40dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/keyline_40dp"
+            />
+
+        <!--ArenaStorage title-->
+        <TextView
+            android:id="@+id/metro_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/redd"
+            app:layout_constraintBottom_toTopOf="@id/head_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="ЦДМ на Лубянке"
+            android:textAppearance="@style/TextAppearance.Winstrike.Title.Big"
+            />
+        <TextView
+            android:id="@+id/address_tv"
+            android:layout_width="wrap_content"
+            tools:layout_width="match_parent"
+            android:text="address Moskow city"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/metro_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@tools:sample/cities"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            android:textColor="@color/color_white"/>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/head_image"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/address_tv"
+            app:layout_constraintBottom_toTopOf="@id/arena_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <!--ArenaStorage descriptions-->
+
+        <RelativeLayout android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/head_image"
+            app:layout_constraintEnd_toEndOf="@id/head_image"
+            app:layout_constraintTop_toTopOf="@id/head_image"
+            app:layout_constraintBottom_toBottomOf="@id/head_image"
+            android:id="@+id/progressHeadImage"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ProgressBar android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="true"
+
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/arena_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="fill"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/seatdetail_description"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/head_image"
+            android:textAppearance="@style/TextAppearance.Winstrike.Content"
+            android:textColor="@color/color_white"/>
+
+        <TextView
+            android:id="@+id/seat_cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/seatdetail_category"
+            app:layout_constraintEnd_toEndOf="@id/line_end"
+            app:layout_constraintStart_toStartOf="@id/line_start"
+            app:layout_constraintTop_toBottomOf="@id/arena_description"
+            android:textAppearance="@style/TextAppearance.Winstrike.Title"
+            android:textColor="@color/color_white"/>
+
+        <!--Carousel fragment: seats of arena-->
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_seat"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:overScrollMode="never"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seat_cat"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

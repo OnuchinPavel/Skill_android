@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="22dp"
+        android:background="@drawable/legend_bg"
+        android:paddingBottom="24dp"
+        android:paddingTop="24dp"
+>
+
+    <TextView
+            android:id="@+id/tv_legend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="Статус мест:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            style="@style/StemMedium17"
+    />
+
+    <ImageView
+            android:id="@+id/iv_vip"
+            android:layout_width="25dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_seat_darkgray"
+            android:rotation="90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_legend"
+            tools:ignore="ContentDescription"
+    />
+
+    <TextView
+            android:id="@+id/tv_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:text="Недоступно"
+            app:layout_constraintStart_toEndOf="@id/iv_vip"
+            app:layout_constraintTop_toBottomOf="@id/tv_legend"
+            style="@style/StemRegular15"
+    />
+
+    <ImageView
+            android:id="@+id/iv_lockyou"
+            android:layout_width="25dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_seat_gray"
+            android:rotation="90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_vip"
+            tools:ignore="ContentDescription"
+    />
+
+    <TextView
+            android:id="@+id/tv_lockyou"
+            style="@style/StemRegular15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:text="Свободно"
+            app:layout_constraintStart_toEndOf="@id/iv_vip"
+            app:layout_constraintTop_toBottomOf="@id/tv_vip"
+    />
+
+    <ImageView
+            android:id="@+id/iv_locked"
+            android:layout_width="25dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_seat_yellow"
+            android:rotation="90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lockyou"
+            tools:ignore="ContentDescription"
+    />
+
+    <TextView
+            android:id="@+id/tv_locked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:text="VIP"
+            app:layout_constraintStart_toEndOf="@id/iv_vip"
+            app:layout_constraintTop_toBottomOf="@id/tv_lockyou"
+            style="@style/StemRegular15"
+    />
+
+    <ImageView
+            android:id="@+id/iv_free"
+            android:layout_width="24dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_seat_red"
+            android:rotation="90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_locked"
+    />
+
+    <TextView
+            android:id="@+id/tv_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:text="Забронировано"
+            app:layout_constraintStart_toEndOf="@id/iv_vip"
+            app:layout_constraintTop_toBottomOf="@id/tv_locked"
+            style="@style/StemRegular15"
+    />
+
+    <ImageView
+            android:id="@+id/iv_self"
+            android:layout_width="24dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_seat_blue"
+            android:rotation="90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_free"
+    />
+
+
+    <TextView
+            android:id="@+id/tv_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:text="Забронировано Вами"
+            app:layout_constraintStart_toEndOf="@id/iv_vip"
+            app:layout_constraintTop_toBottomOf="@id/tv_free"
+            style="@style/StemRegular15"
+    />
+
+    <TextView
+            android:id="@+id/tv_see"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Понял!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_self"
+            style="@style/StemMedium17"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

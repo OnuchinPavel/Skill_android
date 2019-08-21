@@ -1,0 +1,10 @@
+keytool -exportcert -alias dfm -keystore ./store.jks | openssl sha1 -binary | openssl base64
+
+	kJ7pmd0iluw6/5X70LxrP98Qn0c=
+
+keytool -exportcert -list -v -alias dfm -keystore ./store.jks
+
+	 MD5:  76:BA:9D:22:D0:25:D2:AE:88:72:95:9F:CB:7B:76:48
+	 SHA1: 90:9E:E9:99:DD:22:96:EC:3A:FF:95:FB:D0:BC:6B:3F:DF:10:9F:47
+	 SHA256: AC:3C:ED:42:61:57:69:A7:F7:C0:53:81:A3:57:54:D0:6B:CB:EE:D9:23:F0:DC:98:65:C7:3A:9A:DC:F4:11:D4
+

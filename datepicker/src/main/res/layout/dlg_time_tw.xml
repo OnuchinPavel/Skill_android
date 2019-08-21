@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/container"
+              android:layout_width="339dp"
+              android:layout_height="480dp"
+              android:orientation="vertical"
+              tools:activity="com.ositnikov.datepicker.TimePickerPopWin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_picker_const"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="69dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="70dp"
+            android:background="?android:attr/colorPrimaryDark"
+    >
+
+        <!--Layouts guide helpers-->
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/line_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="38dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/line_center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/line_start"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="100dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/line_end"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="100dp"/>
+
+        <!--Кнопка закрытия диалога-->
+        <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:visibility="gone"/>
+
+        <!--Установите время-->
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Установите время"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@android:color/white"
+        />
+
+        <!-- Выберите количество часов в клубе -->
+        <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="58dp"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="16dp"
+                android:text="Выберите количество часов в клубе"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:alpha=".6"
+        />
+
+        <!-- "C" -->
+        <TextView
+                android:id="@+id/tv_from_text"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="c"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_hour_from"
+                app:layout_constraintEnd_toStartOf="@id/tv_hour_from"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_hour_from"
+                app:layout_constraintVertical_bias="0.466"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:alpha=".6"
+        />
+
+        <!--Место тача для выбора "С" времени-->
+        <View
+                android:id="@+id/v_tap_from"
+                android:layout_width="85dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_min_from"
+                app:layout_constraintStart_toStartOf="@id/tv_hour_from"
+                app:layout_constraintTop_toTopOf="@id/tv_hour_from"/>
+
+        <!-- Часы "С" -->
+        <TextView
+                android:id="@+id/tv_hour_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                tools:text="12"
+                app:layout_constraintEnd_toStartOf="@id/tv_from_sep"
+                app:layout_constraintStart_toEndOf="@id/tv_from_text"
+                app:layout_constraintTop_toTopOf="@id/tv_detail"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"
+        />
+
+        <!--:-->
+        <TextView
+                android:id="@+id/tv_from_sep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="58dp"
+                android:text=":"
+                app:layout_constraintEnd_toStartOf="@id/tv_min_from"
+                app:layout_constraintStart_toEndOf="@id/tv_hour_from"
+                app:layout_constraintTop_toTopOf="@id/tv_detail"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+        />
+
+        <!-- Минуты "С" -->
+        <TextView
+                android:id="@+id/tv_min_from"
+                style=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                tools:text="30"
+                app:layout_constraintEnd_toStartOf="@id/tv_to_text"
+                app:layout_constraintStart_toEndOf="@id/tv_from_sep"
+                app:layout_constraintTop_toTopOf="@id/tv_detail"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"
+        />
+
+        <!-- ДО -->
+        <TextView
+                android:id="@+id/tv_to_text"
+                android:layout_width="26dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:text="до"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_hour_to"
+                app:layout_constraintEnd_toStartOf="@id/tv_hour_to"
+                app:layout_constraintStart_toEndOf="@id/tv_min_from"
+                app:layout_constraintTop_toTopOf="@+id/tv_hour_to"
+                app:layout_constraintVertical_bias="0.466"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:alpha=".6"
+
+        />
+
+        <!--Место тача для выбора "ДО" времени -->
+        <View
+                android:id="@+id/v_tap_to"
+                android:layout_width="99dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_min_to"
+                app:layout_constraintStart_toStartOf="@id/tv_hour_to"
+                app:layout_constraintTop_toTopOf="@id/tv_hour_to"/>
+
+        <!-- Часы "ДО" -->
+        <TextView
+                android:id="@+id/tv_hour_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                tools:text="14"
+                app:layout_constraintEnd_toStartOf="@id/tv_to_sep"
+                app:layout_constraintStart_toEndOf="@id/tv_to_text"
+                app:layout_constraintTop_toTopOf="@id/tv_detail"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"
+        />
+
+        <!-- : -->
+        <TextView
+                android:id="@+id/tv_to_sep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="58dp"
+                android:text=":"
+                app:layout_constraintEnd_toStartOf="@id/tv_min_to"
+                app:layout_constraintStart_toEndOf="@id/tv_hour_to"
+                app:layout_constraintTop_toTopOf="@id/tv_detail"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+        />
+
+        <!--Минуты "ДО"-->
+        <TextView
+                android:id="@+id/tv_min_to"
+                android:layout_width="59dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                tools:text="30"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_to_sep"
+                app:layout_constraintTop_toTopOf="@id/tv_detail"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"
+        />
+
+        <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Продолжительность игры"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hour_to"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:alpha=".6"
+        />
+
+        <!-- Часы -->
+        <com.ositnikov.datepicker.LoopView
+                android:id="@+id/picker_hour"
+                android:layout_width="85dp"
+                android:layout_height="@dimen/space_loop_hour"
+                android:layout_marginTop="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/picker_min"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail"
+                app:layout_constraintVertical_bias="0.473"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"
+
+        />
+
+        <!-- Минуты -->
+        <com.ositnikov.datepicker.LoopView
+                android:id="@+id/picker_min"
+                android:layout_width="85dp"
+                android:layout_height="@dimen/space_loop_min"
+                android:layout_marginTop="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/picker_hour"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail"
+                app:layout_constraintVertical_bias="0.473"/>
+
+        <!--Продолжительность игры-->
+        <com.ositnikov.datepicker.LoopView
+                android:id="@+id/picker_number"
+                android:layout_width="85dp"
+                android:layout_height="@dimen/number_height"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@id/btn_confirm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_number"
+                app:layout_constraintVertical_bias="0.473"/>
+
+        <!--Продолжить-->
+        <TextView
+                android:id="@+id/btn_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:text="Продолжить"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="17sp"
+                android:textColor="@android:color/white"
+        />
+
+        <!--Кнопка "Продолжить"-->
+        <View
+                android:id="@+id/v_button_tap"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_confirm"
+                app:layout_constraintEnd_toEndOf="@+id/btn_confirm"
+                app:layout_constraintHorizontal_bias="0.339"
+                app:layout_constraintStart_toStartOf="@+id/btn_confirm"
+                app:layout_constraintTop_toTopOf="@+id/btn_confirm"
+                app:layout_constraintVertical_bias="0.5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

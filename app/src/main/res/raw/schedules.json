@@ -1,0 +1,193 @@
+{
+  "schedules": [
+    {
+      "start_time": "10:00:00",
+      "week_day": "Sunday",
+      "create_at": "2018-04-13T16:55:03.080596+00:00",
+      "end_time": "22:00:00",
+      "name": "Воскресенье",
+      "public_id": "96419254-f205-405d-a14e-c404738d365d",
+      "room_pid": "098695ce-a80b-4b77-af30-30d2d37567b2"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Friday",
+      "create_at": "2018-04-13T16:55:03.077248+00:00",
+      "end_time": "22:00:00",
+      "name": "Пятница",
+      "public_id": "ead5bb8f-d279-4062-9a4d-d23cfbf0e23b",
+      "room_pid": "098695ce-a80b-4b77-af30-30d2d37567b2"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Thursday",
+      "create_at": "2018-04-13T16:55:03.074981+00:00",
+      "end_time": "22:00:00",
+      "name": "Четверг",
+      "public_id": "2c4eccf5-f784-4248-94e7-d66bc2f5ca35",
+      "room_pid": "098695ce-a80b-4b77-af30-30d2d37567b2"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Wednesday",
+      "create_at": "2018-04-13T16:55:03.072766+00:00",
+      "end_time": "22:00:00",
+      "name": "Среда",
+      "public_id": "41888c95-cd1c-49ef-a0b4-267fc753f492",
+      "room_pid": "098695ce-a80b-4b77-af30-30d2d37567b2"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Sunday",
+      "create_at": "2018-11-06T20:11:33.569417+00:00",
+      "end_time": "23:59:00",
+      "name": "Воскресенье",
+      "public_id": "055b0a34-c056-4b8f-9569-1856b55ef7fe",
+      "room_pid": "de6864d2-d02c-4e37-bb04-b19bf961d07a"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Saturday",
+      "create_at": "2018-11-06T20:10:59.684480+00:00",
+      "end_time": "23:59:00",
+      "name": "Суббота",
+      "public_id": "e1b478a6-6594-4ed3-87c3-f761ecd4e24d",
+      "room_pid": "de6864d2-d02c-4e37-bb04-b19bf961d07a"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Friday",
+      "create_at": "2018-11-06T20:10:25.458382+00:00",
+      "end_time": "23:59:00",
+      "name": "Пятница",
+      "public_id": "f9d28d53-0ccf-4f57-a264-c1579622f759",
+      "room_pid": "de6864d2-d02c-4e37-bb04-b19bf961d07a"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Thursday",
+      "create_at": "2018-11-06T20:09:56.052685+00:00",
+      "end_time": "23:59:00",
+      "name": "Четверг",
+      "public_id": "2d2c329c-052d-49ae-9c51-83209f837210",
+      "room_pid": "de6864d2-d02c-4e37-bb04-b19bf961d07a"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Wednesday",
+      "create_at": "2018-11-06T20:09:18.637854+00:00",
+      "end_time": "23:59:00",
+      "name": "Среда",
+      "public_id": "a86e2914-9148-4f98-aef5-f599b44fe9ad",
+      "room_pid": "de6864d2-d02c-4e37-bb04-b19bf961d07a"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Tuesday",
+      "create_at": "2018-11-06T20:08:40.750104+00:00",
+      "end_time": "23:59:00",
+      "name": "Вторник",
+      "public_id": "29950688-daa8-4eb2-b9cb-d323ba6bfaf7",
+      "room_pid": "de6864d2-d02c-4e37-bb04-b19bf961d07a"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Tuesday",
+      "create_at": "2018-04-13T16:55:03.070834+00:00",
+      "end_time": "22:00:00",
+      "name": "Вторник",
+      "public_id": "3dee52f1-6212-426e-918f-e034254b4c59",
+      "room_pid": "098695ce-a80b-4b77-af30-30d2d37567b2"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Monday",
+      "create_at": "2018-04-13T16:55:03.067386+00:00",
+      "end_time": "22:00:00",
+      "name": "Понедельник",
+      "public_id": "0bbb1d3a-90f0-4a05-b0b1-08cfdee46dd5",
+      "room_pid": "098695ce-a80b-4b77-af30-30d2d37567b2"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Monday",
+      "create_at": "2018-11-06T20:08:04.885753+00:00",
+      "end_time": "23:59:00",
+      "name": "Понедельник",
+      "public_id": "d5ba2539-541e-4ba1-894e-22c4e4a295e9",
+      "room_pid": "de6864d2-d02c-4e37-bb04-b19bf961d07a"
+    },
+    {
+      "start_time": "00:00:00",
+      "week_day": "Thursday",
+      "create_at": "2018-12-20T16:35:08.018893+00:00",
+      "end_time": "23:59:00",
+      "name": "Четверг",
+      "public_id": "018658c8-fd1f-4e6e-aca2-18c18cfc97aa",
+      "room_pid": "1e0468ef-683d-4563-a5f2-d2486fbe8d64"
+    },
+    {
+      "start_time": "00:00:00",
+      "week_day": "Wednesday",
+      "create_at": "2018-12-20T16:34:35.301441+00:00",
+      "end_time": "23:59:00",
+      "name": "Среда",
+      "public_id": "0d5d756a-e10c-4598-990a-fe56bb62617c",
+      "room_pid": "1e0468ef-683d-4563-a5f2-d2486fbe8d64"
+    },
+    {
+      "start_time": "00:00:00",
+      "week_day": "Tuesday",
+      "create_at": "2018-12-20T16:33:59.784418+00:00",
+      "end_time": "23:59:00",
+      "name": "Вторник",
+      "public_id": "5f370bd0-d5cb-473d-94cf-5581ebf201da",
+      "room_pid": "1e0468ef-683d-4563-a5f2-d2486fbe8d64"
+    },
+    {
+      "start_time": "00:00:00",
+      "week_day": "Monday",
+      "create_at": "2018-12-20T16:33:29.693813+00:00",
+      "end_time": "23:59:00",
+      "name": "Понедельник",
+      "public_id": "999a137a-ec8f-439a-9b3a-a37d6326ef97",
+      "room_pid": "1e0468ef-683d-4563-a5f2-d2486fbe8d64"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Friday",
+      "create_at": "2018-12-20T16:35:32.237868+00:00",
+      "end_time": "22:00:00",
+      "name": "Пятница",
+      "public_id": "980abaa3-0181-45ad-b8d9-17e769899c13",
+      "room_pid": "1e0468ef-683d-4563-a5f2-d2486fbe8d64"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Saturday",
+      "create_at": "2018-12-20T16:35:53.297326+00:00",
+      "end_time": "22:00:00",
+      "name": "Суббота",
+      "public_id": "2e2f341f-f259-4196-922e-c213e522c7e2",
+      "room_pid": "1e0468ef-683d-4563-a5f2-d2486fbe8d64"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Sunday",
+      "create_at": "2018-12-20T16:36:26.235297+00:00",
+      "end_time": "22:00:00",
+      "name": "Воскресенье",
+      "public_id": "d03b47bf-67a2-482a-8004-d3e09ba1cd4c",
+      "room_pid": "1e0468ef-683d-4563-a5f2-d2486fbe8d64"
+    },
+    {
+      "start_time": "10:00:00",
+      "week_day": "Saturday",
+      "create_at": "2018-04-13T21:44:24.374434+00:00",
+      "end_time": "22:00:00",
+      "name": "Суббота",
+      "public_id": "276196d8-095a-4d60-bdbf-3fc05878dcae",
+      "room_pid": "098695ce-a80b-4b77-af30-30d2d37567b2"
+    }
+  ]
+}

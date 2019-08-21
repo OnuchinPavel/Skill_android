@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="planetsInSolarSystem">
+        <item>@array/arrayMercury</item>
+        <item>@array/arrayVenus  </item>
+    </array>
+
+    <array name="arrayMercury">
+        <item name="name">@string/name_mercury</item>
+        <item name="distance">@string/distance_mercury</item>
+    </array>
+
+    <array name="arrayVenus">
+        <item name="name">@string/name_venus</item>
+        <item name="distance">@string/distance_venus</item>
+    </array>
+
+</resources>

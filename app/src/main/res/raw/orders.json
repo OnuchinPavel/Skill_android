@@ -1,0 +1,28 @@
+{
+  "orders": [
+    {
+      "access_code": "wzbuf0rc",
+      "cost": 100,
+
+      "create_at": "2019-02-23T14:44:17.203193+00:00",
+
+      "start_at": "2019-02-25T17:45:00+00:00",
+      "end_at": "2019-02-25T18:45:00+00:00",
+
+      "public_id": "482a23a4-6a7b-4031-8ad3-4a640c27ba2f",
+      "place": {
+        "name": "Место 1 (Обычное) Serpuhov",
+        "computer": {
+          "active": false,
+          "create_at": "2018-12-20T15:54:33.090731+00:00",
+          "name": "Место 1 (Обычное) Serpuhov",
+          "public_id": "241d5f8b-cd05-4ac5-a20a-7c3992d81748",
+          "room_pid": "1e0468ef-683d-4563-a5f2-d2486fbe8d64"
+        }
+      },
+      "user_pid": "2906740b-6319-48ae-88c1-9fa759f3c32f",
+      "place_pid": "19e78994-b646-4d25-98ee-9a597cbb47bb",
+      "room_name": "Winstrike Tavern"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/back_skill"
+    android:layout_height="match_parent"
+    >
+
+
+    <!--Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/padding_standart_16dp"
+        android:text="Реальный номер телефона"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="64dp"
+        android:textAppearance="@style/TextAppearance.Winstrike.Title"
+        android:textColor="@color/color_white"/>
+
+    <!--User phone -->
+    <include layout="@layout/inc_help_phone"/>
+
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/start_edit_24dp"
+        android:text="@string/all_phonemaskru"
+        app:layout_constraintBottom_toBottomOf="@id/phone_ti"
+        app:layout_constraintStart_toStartOf="@id/phone_ti"
+        app:layout_constraintTop_toTopOf="@id/phone_ti"
+        android:textAppearance="@style/TextAppearance.Winstrike.Content"
+        />
+
+    <View
+        android:id="@+id/img_div"
+        android:layout_width="1dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="15dp"
+        android:alpha=".2"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/phone_ti"
+        app:layout_constraintStart_toEndOf="@id/tv_country"
+        app:layout_constraintTop_toTopOf="@id/phone_ti"
+        />
+
+
+    <!--Phone hint text-->
+    <TextView
+        android:id="@+id/hint_30s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_standarthalf_8dp"
+        android:text="@string/reg_codehint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_ti"
+        android:textAppearance="@style/TextAppearance.Winstrike.Hint"
+        android:textColor="@color/color_white"/>
+
+    <!--Phone next button-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/phone_btn"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:text="Отправить код"
+        android:enabled="true"
+        android:maxLines="1"
+        android:backgroundTint="@color/redd"
+        app:layout_constraintTop_toBottomOf="@id/hint_30s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Widget.Winstrike.Button"
+        />
+
+
+    <!--Footer text-->
+    <!--TODO: make it spannable-->
+    <TextView
+        android:id="@+id/login_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Уже есть аккаунт? Войдите"
+        android:layout_marginBottom="@dimen/spacing_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAppearance="@style/TextAppearance.Winstrike.Hint.Big"
+        android:textColor="@color/color_white" android:textColorLink="@color/redd"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
